@@ -14,7 +14,7 @@
 .start {
   justify-content: center;
   align-items: center;
-  width: 50vw;
+  width: 80vw !important;
   height: 50vh;
   border: #ccc 1px solid !important;
   box-shadow: 8px 8px #eee;
@@ -24,8 +24,8 @@
 .quiz {
   margin: auto;
   margin-top: 2rem;
-  width: 70vw;
-  height: 90vh;
+  width: 80vw;
+  height: 120vh;
   border: #ccc 1px solid !important;
   box-shadow: 8px 8px #eee;
   border-radius: 5px;
@@ -35,7 +35,12 @@
   font-size: 22px;
 }
 
+.next {
+  width: 30vw;
+  margin: auto;
+}
 
-
-
+.option {
+  height: 185vw;
+}
 

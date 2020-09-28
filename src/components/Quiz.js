@@ -93,13 +93,13 @@ class Quiz extends Component {
 
 
         return(
-            <div className="d-flex justify-content-center align-item-center ">
+            <div className="d-flex justify-content-center align-item-center row">
                     
-                <div className='m-5'>{ isLoading ? <Loader /> : null}</div>
-
+                {/* <div className='m-5'>{ isLoading ? <Loader /> : null}</div> */}
+                <div classname="col-sm-12 col-lg-6 ">
             { quiz.length && currentques >= 0 && currentques < quiz.length  ? 
                 <Card body className="quiz ">
-                    <div className="h-75" >
+                    <div className="option" >
                         <h3 className='text-center'>{currentques + 1}/10</h3>
                         <h2 className="text-center my-4"> Question : </h2>
                         <h4 className="mx-2">{quiz[currentques].question}</h4>
@@ -126,20 +126,21 @@ class Quiz extends Component {
 
                     { currentques === 9 ? 
                     
-                    <div className="d-flex justify-content-center mx-4 align-items-center h-25">
+                    <div className="next d-flex justify-content-center align-items-center ">
                         {/* <Button variant="outline-primary" onClick={this.prevBtn } disabled>Previous</Button> */}
                             <Button variant="outline-primary" className="text-center" onClick={this.countScore}>
                                 Finish
                             </Button>
                     </div>
                     :
-                    <div className="d-flex justify-content-center mx-4 align-items-center h-25">
+                    <div className="next d-flex justify-content-center align-items-center ">
                         {/* <Button variant="outline-primary" onClick={this.prevBtn} disabled>Previous</Button> */}
                         <Button variant="outline-primary" onClick={this.prevfun} >Next</Button>
                     </div>
                     }
 
                 </Card> : null}
+                </div>
             </div>
         )
     }
