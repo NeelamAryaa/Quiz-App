@@ -28,18 +28,18 @@ class Quiz extends Component {
     // };
 
 
-    prevBtn = () => {
-        const {score} = this.state;
+    // prevBtn = () => {
+    //     const {score} = this.state;
 
-        if(this.state.currentques === 0) return;
-        this.setState({currentques: this.state.currentques - 1})
-        this.setState({score: score - 1})
-    };
+    //     if(this.state.currentques === 0) return;
+    //     this.setState({currentques: this.state.currentques - 1})
+    //     this.setState({score: score - 1})
+    // };
 
     countScore = () => {
         const { option, quiz, score, currentques } = this.state;
-        console.log(score);  
-        console.log(option);
+        // console.log(score);  
+        // console.log(option);
         console.log(quiz[this.state.currentques].correct_answer); 
         if(option === quiz[this.state.currentques].correct_answer) {
             this.setState((prevState, prevProps) => ({
@@ -59,14 +59,9 @@ class Quiz extends Component {
             (currentques === 9){
             this.props.history.push({pathname: '/score', state: {score: this.state.score} })
             console.log(`currentques: ${currentques}`)
-        }
-        
-        
-
+        }        
     }
         
-    
-
 
     prevfun = () => {
         const {currentques} = this.state;
@@ -86,7 +81,7 @@ class Quiz extends Component {
             .catch((error) => {
                 this.setState({isLoading: false})
                 console.log(error)
-                alert('API is not fetched');
+                alert('Something went wrong !!!');
             })
 
             
@@ -143,8 +138,6 @@ class Quiz extends Component {
                         <Button variant="outline-primary" onClick={this.prevfun} >Next</Button>
                     </div>
                     }
-
-
 
                 </Card> : null}
             </div>
