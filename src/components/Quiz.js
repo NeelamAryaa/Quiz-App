@@ -96,7 +96,7 @@ class Quiz extends Component {
             <div className="d-flex justify-content-center align-item-center row">
                     
                 {/* <div className='m-5'>{ isLoading ? <Loader /> : null}</div> */}
-                {isLoading ? <p>Loading...</p> : null}
+                {isLoading ? <Loader /> : null}
                 <div classname="col-sm-12 col-lg-6 ">
             { quiz.length && currentques >= 0 && currentques < quiz.length  ? 
                 <Card body className="quiz ">
