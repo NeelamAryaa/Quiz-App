@@ -5,6 +5,8 @@
 }
 
 .mycard {
+  width: 75vw;
+  margin: auto;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -26,8 +28,8 @@
   margin-top: 2rem;
   width: 80vw;
   height: 120vh;
-  border: #ccc 1px solid !important;
-  box-shadow: 8px 8px #eee;
+  /* border: #ccc 1px solid !important; */
+  /* box-shadow: 8px 8px #eee; */
   border-radius: 5px;
 }
 
@@ -41,6 +43,10 @@
 }
 
 .option {
-  height: 185vw;
+  display: block;
+  margin-bottom: 3rem;
 }
 
+.spin {
+  margin: 2rem;
+}

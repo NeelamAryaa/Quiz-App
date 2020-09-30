@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import axios from 'axios';
 import Loader from './Loader'
 
@@ -94,12 +94,10 @@ class Quiz extends Component {
 
         return(
             <div className="d-flex justify-content-center align-item-center row">
-                    
-                {/* <div className='m-5'>{ isLoading ? <Loader /> : null}</div> */}
                 {isLoading ? <Loader /> : null}
                 <div classname="col-sm-12 col-lg-6 ">
             { quiz.length && currentques >= 0 && currentques < quiz.length  ? 
-                <Card body className="quiz ">
+                <div body className="quiz ">
                     <div className="option" >
                         <h3 className='text-center'>{currentques + 1}/10</h3>
                         <h2 className="text-center my-4"> Question : </h2>
@@ -121,8 +119,6 @@ class Quiz extends Component {
                             <input className="mx-3" id='option-4' type="radio" name="ques" value={quiz[currentques].correct_answer} checked={option === quiz[currentques].correct_answer} onChange={this.onChangeHandler} />
                             <label className="mcq" htmlFor='option-4' >{quiz[currentques].correct_answer}</label>
                         </div>
-                        
-                        
                     </div>
 
                     { currentques === 9 ? 
@@ -140,7 +136,7 @@ class Quiz extends Component {
                     </div>
                     }
 
-                </Card> : null}
+                </div> : null}
                 </div>
             </div>
         )
